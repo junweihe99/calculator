@@ -1,0 +1,42 @@
+.calculator{
+    display: flex;
+    flex-direction: column;
+    background: grey;
+    padding: 25px;
+    border-radius: 10px;
+    gap: 10px;
+    width: 420px;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen{
+    display: flex;
+    background: skyblue;
+    height: 100px;
+    align-items: center;
+    border-radius: 10px;
+    width: 415px;
+}
+
+.results{
+    color: black;
+    font-size: 75px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.zero{
+    width: 205px;
+}
