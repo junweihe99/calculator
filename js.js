@@ -140,3 +140,21 @@ clear.addEventListener('click', () => {
     operation = "";
     display.textContent = 0;
 });
+
+const signs = document.querySelector('.sign');
+signs.addEventListener('click', () => {
+    let negative = display.textContent.search("-");
+    if(negative == -1)
+    {
+        display.textContent = "-" + display.textContent;
+    }
+    else
+    {
+        display.textContent = display.textContent.slice(1);
+    }
+});
+
+const percent = document.querySelector('.percent');
+percent.addEventListener('click', () => {
+    display.textContent = parseFloat(operate("/", display.textContent, 100).toFixed(8));
+});
