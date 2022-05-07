@@ -96,11 +96,11 @@ operations.forEach((button) => {
             secondOperand = display.textContent;
             if(operation == "+")
             {
-               firstOperand = operate(operation, firstOperand, secondOperand);
+               firstOperand = operate(operation, +firstOperand, +secondOperand);
             }
             else
             {
-                firstOperand = parseFloat(operate(operation, firstOperand, secondOperand).toFixed(4));
+                firstOperand = parseFloat(operate(operation, firstOperand, secondOperand).toFixed(8));
             }
             display.textContent = firstOperand;
             operation = button.textContent;
@@ -119,11 +119,11 @@ equal.addEventListener('click', () => {
     secondOperand = display.textContent;
     if(operation == "+")
     {
-        display.textContent = operate(operation, firstOperand, secondOperand);
+        display.textContent = operate(operation, +firstOperand, +secondOperand);
     }
     else
     {
-        display.textContent = parseFloat(operate(operation, firstOperand, secondOperand).toFixed(4));
+        display.textContent = parseFloat(operate(operation, firstOperand, secondOperand).toFixed(8));
     }
     firstOperand = display.textContent;
     operation = "";
