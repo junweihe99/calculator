@@ -91,7 +91,11 @@ numbers.forEach((button) => {
 const operations = document.querySelectorAll('.operator');
 operations.forEach((button) => {
     button.addEventListener('click', () => {
-        if(firstOperand !== 0)
+        if(firstOperand != 0 && operation == "")
+        {
+            operation = button.textContent;
+        }
+        else if(firstOperand != 0)
         {
             secondOperand = display.textContent;
             if(operation == "+")
