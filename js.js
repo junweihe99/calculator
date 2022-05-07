@@ -120,18 +120,24 @@ operations.forEach((button) => {
 
 const equal = document.querySelector('.equal');
 equal.addEventListener('click', () => {
-    secondOperand = display.textContent;
-    if(operation == "+")
+    if(operation == "")
     {
-        display.textContent = operate(operation, +firstOperand, +secondOperand);
     }
     else
     {
-        display.textContent = parseFloat(operate(operation, firstOperand, secondOperand).toFixed(8));
+        secondOperand = display.textContent;
+        if(operation == "+")
+        {
+            display.textContent = operate(operation, +firstOperand, +secondOperand);
+        }
+        else
+        {
+            display.textContent = parseFloat(operate(operation, firstOperand, secondOperand).toFixed(8));
+        }
+        firstOperand = display.textContent;
+        operation = "";
+        secondOperand = 0;
     }
-    firstOperand = display.textContent;
-    operation = "";
-    secondOperand = 0;
 });
 
 const clear = document.querySelector('.clear');
