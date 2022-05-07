@@ -8,6 +8,7 @@
     width: 420px;
     justify-content: center;
     align-items: center;
+    border: 1px solid;
 }
 
 .screen{
@@ -17,6 +18,7 @@
     align-items: center;
     border-radius: 10px;
     width: 415px;
+    border: 1px solid;
 }
 
 .results{
@@ -36,8 +38,22 @@ button{
     height: 100px;
     border-radius: 10px;
     font-size: 25px;
+    border: 1px solid;
+    font-weight: bold;
 }
 
 .zero{
     width: 205px;
+}
+
+.operator,.equal{
+    background: red;
+}
+
+.number{
+    background: green;
+}
+
+.clear,.sign,.percent{
+    background: blue;
 }
